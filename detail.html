@@ -1,0 +1,177 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0145)https://aic.gdkmxy.cn/flow/WF/WorkOpt/OneWork/OneWork.htm?CurrTab=TimeBase&FK_Flow=115&FK_Node=11502&WorkID=313932&FID=0&WorkID=313932&CCSta=null -->
+<html xmlns="http://www.w3.org/1999/xhtml" class="panel-fit" data-redeviation-bs-uid="93233">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>时间轴</title>
+    <link href="./easyui.css" rel="stylesheet" type="text/css">
+    <!-- <link href="./时间轴_files/icon.css" rel="stylesheet" type="text/css"> -->
+    <!-- <script src="./时间轴_files/jquery.min.js.下载" type="text/javascript"></script>
+    <script src="./时间轴_files/jquery.easyui.min.js.下载" type="text/javascript"></script>
+    <script src="./时间轴_files/QueryString.js.下载" type="text/javascript"></script>
+    <script src="./时间轴_files/config.js.下载" type="text/javascript"></script>
+    <script src="./时间轴_files/Gener.js.下载" type="text/javascript"></script> -->
+
+    <style class="redeviation-bs-style" data-name="content">
+        /*! (c) Philipp König under GPL-3.0 */
+        body>div#redeviation-bs-indicator>div {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        body>iframe#redeviation-bs-sidebar.redeviation-bs-visible,
+        body>iframe#redeviation-bs-overlay.redeviation-bs-visible {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        body.redeviation-bs-noscroll {
+            overflow: hidden !important
+        }
+
+        body>div#redeviation-bs-indicator>div {
+            position: absolute;
+            transform: translate3d(-40px, 0, 0);
+            top: 0;
+            left: 0;
+            width: 40px !important;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0 10px 10px 0;
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 2
+        }
+
+        body>div#redeviation-bs-indicator>div>span {
+            -webkit-mask: no-repeat center/32px;
+            -webkit-mask-image: url(chrome-extension://jdbnofccmhefkmjbkkdkfiicjkgofkdh/img/icon-bookmark.svg);
+            background-color: #ffffff;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='right'] {
+            left: auto;
+            right: 0
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='right']>div {
+            transform: translate3d(40px, 0, 0);
+            left: auto;
+            right: 0;
+            border-radius: 10px 0 0 10px
+        }
+
+        body>div#redeviation-bs-indicator.redeviation-bs-fullHeight>div {
+            border-radius: 0
+        }
+
+        body>div#redeviation-bs-indicator.redeviation-bs-hover>div {
+            transform: translate3d(0, 0, 0);
+            opacity: 1
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb {
+            height: 100% !important;
+            top: 0 !important
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb>div {
+            background: transparent
+        }
+
+        body>div#redeviation-bs-indicator[data-pos='left'].redeviation-bs-has-lsb>div>span {
+            -webkit-mask-position-y: 20px
+        }
+
+        body>iframe#redeviation-bs-sidebar {
+            width: 350px;
+            max-width: none;
+            height: 0;
+            z-index: 2147483646;
+            background-color: rgba(0, 0, 0, 0.6) !important;
+            color-scheme: normal !important;
+            speak: none;
+            border: none;
+            display: block !important;
+            transform: translate3d(-350px, 0, 0);
+            transition: width 0s 0.3s, height 0s 0.3s, opacity 0.3s, transform 0.3s
+        }
+
+        body>iframe#redeviation-bs-sidebar[data-pos='right'] {
+            left: auto;
+            right: 0;
+            transform: translate3d(350px, 0, 0)
+        }
+
+        body>iframe#redeviation-bs-sidebar.redeviation-bs-visible {
+            width: calc(100% + 350px);
+            height: 100%;
+            transform: translate3d(0, 0, 0);
+            transition: opacity 0.3s, transform 0.3s
+        }
+
+        body>iframe#redeviation-bs-sidebar.redeviation-bs-hideMask {
+            background: none !important
+        }
+
+        body>iframe#redeviation-bs-sidebar.redeviation-bs-hideMask:not(.redeviation-bs-hover) {
+            width: calc(350px + 50px)
+        }
+
+        body>iframe#redeviation-bs-overlay {
+            width: 100%;
+            max-width: none;
+            height: 100%;
+            z-index: 2147483647;
+            border: none;
+            speak: none;
+            background: rgba(0, 0, 0, 0.5) !important;
+            transition: opacity 0.3s
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs-panels" style="height: 30px; width: 1638px;">
+        <div class="panel" style="display: block; width: 1638px;">
+            <div class="tabs-header panel-body panel-body-noheader panel-body-noborder"
+                style="width: 1636px; height: 1055px;" title="">
+                <div class="tabs-scroller-left" style="display: none;"></div>
+                <div class="tabs-scroller-right" style="display: none;"></div>
+                <div class="tabs-wrap" style="margin-left: 0px; margin-right: 0px; width: 1638px;">
+                    <ul class="tabs" style="height: 26px;">
+                        <li class="tabs-first"><a href="javascript:void(0)" class="tabs-inner"
+                                style="height: 25px; line-height: 25px;"><span class="tabs-title">查看表单</span><span
+                                    class="tabs-icon"></span></a></li>
+                        <li class=""><a href="./3.html" class="tabs-inner"
+                                style="height: 25px; line-height: 25px;"><span class="tabs-title">轨迹图</span><span
+                                    class="tabs-icon"></span></a></li>
+                        <li class="tabs-selected"><a href="javascript:void(0)" class="tabs-inner"
+                                style="height: 25px; line-height: 25px;"><span class="tabs-title">时间轴</span><span
+                                    class="tabs-icon"></span></a></li>
+                        <li class="tabs-last"><a href="javascript:void(0)" class="tabs-inner"
+                                style="height: 25px; line-height: 25px;"><span class="tabs-title">操作</span><span
+                                    class="tabs-icon"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <iframe src="./TimeBase.html" frameborder="0" style="width:100%;height:100%;"></iframe>
+
+</body>
+
+
+
+
+
+</html>

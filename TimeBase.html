@@ -1,0 +1,89 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0118)https://aic.gdkmxy.cn/flow/WF/WorkOpt/OneWork/TimeBase.htm?FK_Node=11502&WorkID=313932&FK_Flow=115&FID=0&FromWorkOpt=1 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>时间轴</title>
+    <link href="./TimeBase.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        span {
+            color: Gray;
+            margin: 10px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <table style="width: 100%;" id="Table1">
+        <tbody>
+            <tr>
+                <th class="TDTime">工作人员</th>
+                <th class="TDBase"> </th>
+                <th> 内容</th>
+            </tr>
+            <tr title="发送">
+                <td class="TDTime"><span style="margin: 0; color: black;" id="d3">09月30日07时35分</span><br><img src="./Default.png"
+                        onerror="src=&#39;../../../DataUser/UserIcon/Default.png&#39;"
+                        style="width:60px;"><br>肖志杰&nbsp;&nbsp;&nbsp;</td>
+                <td class="TDBase"></td>
+                <td class="TDDoc"><img src="./Forward.png" width="10px;" class="ImgOfAC" alt="发送">学生申请 - 发送<p>
+                        <span>到达节点:</span>
+                        <font color="green">辅导员审核</font><span>到达人员:</span>
+                        <font color="green">李婷</font>
+                    </p>
+                    <p>
+                        <font color="green"><br>外出理由:市区办事</font><br>
+                    </p>
+                </td>
+            </tr>
+            <tr title="流程结束">
+                <td class="TDTime"><span style="margin: 0; color: black;" id="d2">09月30日07时35分</span><br><img src="./Default.png"
+                        onerror="src=&#39;../../../DataUser/UserIcon/Default.png&#39;"
+                        style="width:60px;"><br>李婷&nbsp;&nbsp;&nbsp;</td>
+                <td class="TDBase"></td>
+                <td class="TDDoc"><img src="./Dot.png" width="10px;" class="ImgOfAC" alt="流程结束">辅导员审核 - 流程结束<p>
+                        <font color="green"><br>流程已经走到最后一个节点，流程成功结束。审核意见:同意</font><br>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+<script>
+    var times = new Date();
+var month = times.getMonth() + 1;
+if (month <= 9) {
+month = "0" + month;
+}
+var day = times.getDate();
+var days = times.getDate();
+var hour = times.getHours();
+var min = times.getMinutes();
+if (day < 10) {
+
+day = "0" + day;
+
+days = "0" + days;
+
+}
+if (min < 10) {
+
+min = "0" + min;
+}
+
+if (document.getElementById("d2")) {
+document.getElementById("d2").innerHTML = month + "月" + (days) + "日09时15分";
+// document.getElementById("d2").innerHTML = "2020-12-31 09:06";
+}
+if (document.getElementById("d3")) {
+document.getElementById("d3").innerHTML = month + "月" + (days) + "日09时06分";
+// document.getElementById("d2").innerHTML = "2020-12-31 09:06";
+}
+</script>
+</html>
